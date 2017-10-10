@@ -1,11 +1,13 @@
 from student import Student
 
 
-class Class(object):
+class Classroom(object):
     """docstring for Class."""
-    def __init__(self, name):
+    def __init__(self, name, day, time):
         # super(Class, self).__init__()
         self.name = name
+        self.day = day
+        self.time = time
         self.students = {}
 
     def create_student(self, name):
@@ -16,6 +18,9 @@ class Class(object):
     def delete_student(self, name):
         if self.students[name] in self.students:
             self.students.pop(name)
+
+
+
 
 
 # history_class = Class("history")
